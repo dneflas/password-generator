@@ -42,6 +42,22 @@ function generatePassword() {
     console.log(characters);
   };
 
+  console.log(characters);
+  
+  //confirm 1 character type has been selected, in not window alert and return to confirm characters
+
+
+  // for loop to generate random characters
+  var randomPassword ="";
+  for(i = 0; i < passwordLength; i++){
+    var randomNumber = Math.floor(Math.random() * characters.length);
+    console.log(randomNumber);
+
+    randomPassword += characters.charAt(randomNumber);
+    console.log(randomPassword);
+
+  }
+  return randomPassword;
 };
 
 
