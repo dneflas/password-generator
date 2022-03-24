@@ -7,6 +7,40 @@ function generatePassword() {
   if(passwordLength < 8 || passwordLength >128 || !passwordLength){
     window.alert("Please try again. Enter a valid number between 8 and 128.");
     return generatePassword();
+  };
+
+  // confirm lowercase characters
+  var characters = "";
+  var confirmLowerCase = window.confirm("Click OK to confirm including lowercase characters.");
+  if (confirmLowerCase){
+    var lowerCaseChar = "abcdefghijklmnopqrstuvwxyz";
+    characters += lowerCaseChar;
+    console.log(characters);
+  };
+
+  // confirm uppercase characters
+  var confirmUpperCase = window.confirm(" Click OK to confirm including uppercase characters.");
+  if (confirmUpperCase){
+    var upperCaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    characters += upperCaseChar;
+    console.log(characters);
+  };
+
+  // confirm numeric characters
+  var confirmNumeric = window.confirm("Click OK to confirm including numeric characters.");
+  if(confirmNumeric){
+    var numericChar = "0123456789";
+    characters += numericChar;
+    console.log(characters);
+  };
+
+  // confirm special characters
+  var confirmSpecial = window.confirm("Click OK to confirm including special characters.");
+  if(confirmSpecial){
+    var specialChar = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+    characters += specialChar;
+    console.log(characters);
+  };
 
 };
 
