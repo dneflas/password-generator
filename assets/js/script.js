@@ -1,4 +1,14 @@
-// Assignment code here
+// generate password function
+function generatePassword() {
+  // prompt for length of password between 8 and 128 characters
+  var passwordLength = window.prompt("How many characters would you like your password to contain?");
+  passwordLength = parseInt(passwordLength);
+
+  if(passwordLength < 8 || passwordLength >128 || !passwordLength){
+    window.alert("Please try again. Enter a valid number between 8 and 128.");
+    return generatePassword();
+
+};
 
 
 // Get references to the #generate element
